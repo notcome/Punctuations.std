@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+  <script type="text/javascript" src="/static/common.js"></script>
+  <script type="text/javascript" src="/static/analyze.js"></script>
+  <script type="text/javascript" src="/static/generate.js"></script>
+  <script type="text/javascript" src="/static/demo.js"></script>
+  <title>Demo - Punctuation Trim</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue" "Source Han Sans SC";
+    }
+    main {
+      width: 800px;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>标点挤压</h1>
+    <p>这是一个标点挤压框架的原型。</p>
+    <p>它的基本原理是，扫描需要在浏览器中呈现的标点符号，如果发现两个或以上的全角标点相连接，则针对该标点序列，生成一个新的连字，在连字字形内完成标点挤压。所有的连字构成一个 SVG 字体，并接着以 Base64 编码格式嵌入到文档内。</p>
+    <p id="test">小明说：「为了更好的中文排版！」<br>小红说：「小明说了一句『为了更好的中文排版！』，我十分激动，便写了一本《Web 中文排版指南》。」</p>
+    <p>小明说：「为了更好的中文排版！」<br>小红说：「小明说了一句『为了更好的中文排版！』，我十分激动，便写了一本《Web 中文排版指南》。」</p>
+  </main>
+</body>
+</html>
+

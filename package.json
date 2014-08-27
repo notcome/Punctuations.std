@@ -1,0 +1,12 @@
+{
+  "name": "Punctuations.std",
+  "author": "Minsheng Liu",
+  "email": "notcome@me.com",
+  "dependencies": {
+    "traceur": "0.0.58",
+    "libxmljs": "0.11.0",
+    "express": "~4.8.0",
+    "parse-svg-path": "0.1.1",
+    "suspend": "0.5.1"
+  }
+}

@@ -45,6 +45,7 @@ function hTransform (path, advance) {
 }
 
 function trimCluster (puncs, advance, trimInfo) {
+  advance = parseInt(advance);
   var cluster = trimInfo.cluster;
   var trimList = trimInfo.trimList;
   var halfWidth = advance / 2;

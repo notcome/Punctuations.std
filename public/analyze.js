@@ -23,7 +23,7 @@ function determineTrim (cluster) {
   for (var i = 0, j = 1; j < cluster.length; i++, j ++) {
     if (isOpening(cluster[j]))
       trimList[j] = true;
-    if (isClosing(cluster[i]) && isClosing(cluster[j]))
+    if (isClosing(cluster[i]) && (isClosing(cluster[j]) || isDots(cluster[j])))
       trimList[i] = true;
   }
 
@@ -36,5 +36,6 @@ function determineTrim (cluster) {
 function analyze (lorem) {
   var clusterList = analyzeText(lorem);
   clusterList = clusterList.map(determineTrim);
+  console.log(JSON.stringify(clusterList), null, 2);
   return clusterList; 
 }

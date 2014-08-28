@@ -2,7 +2,8 @@ var SVGFontPrefix = '<?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "
 var SVGFontSuffix = '</font></defs></svg>';
 
 var list = '、。，！？；：（）《》「」『』'.split('');
-var closing = '、。，！？；：）》」』'.split('');
+var dots = '、。，！？；：'.split('');
+var closing = '）》」』'.split('');
 var opening = '（《「『'.split('');
 
 function isXXX (list) {
@@ -14,6 +15,7 @@ function isXXX (list) {
 var isInList = isXXX(list);
 var isOpening = isXXX(opening);
 var isClosing = isXXX(closing);
+var isDots = isXXX(dots);
 
 var StylePrefix = '@font-face { font-family: "Test"; src: url(data:image/svg+xml;base64,';
 var StyleSuffix = ') format("svg"); } #test { font-family: "Test" "Helvetica Neue" "Source Han Sans SC"; }';
